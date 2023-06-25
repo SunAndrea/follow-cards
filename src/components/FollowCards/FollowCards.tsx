@@ -110,10 +110,7 @@ const FollowCards: React.FC = () => {
           return (
             <li className={css.list} key={id}>
               <div className={css.listItem}>
-                <img
-                  className={css.image}
-                  src={BASE_URL + "./../public/picture.png"}
-                />
+                <img className={css.image} src={BASE_URL + "picture.png"} />
                 <div className={css.line}>
                   <div className={css.avatarWrapper}>
                     <img
