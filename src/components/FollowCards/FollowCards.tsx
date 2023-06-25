@@ -4,7 +4,7 @@ import Select from "react-select";
 import { getAllUsers, updateFollowers } from "../../api/api";
 import css from "./FollowCards.module.css";
 import { Link } from "react-router-dom";
-
+const { BASE_URL } = import.meta.env;
 interface User {
   user: string;
   tweets: number;
@@ -110,7 +110,10 @@ const FollowCards: React.FC = () => {
           return (
             <li className={css.list} key={id}>
               <div className={css.listItem}>
-                <img className={css.image} src="../../public/picture.png" />
+                <img
+                  className={css.image}
+                  src={BASE_URL + "./../public/picture.png"}
+                />
                 <div className={css.line}>
                   <div className={css.avatarWrapper}>
                     <img
