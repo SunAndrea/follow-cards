@@ -23,7 +23,7 @@ export const getAllUsers = async (): Promise<UsersResponse> => {
     const response = await api.get<UsersResponse>(`/users`);
     return response.data;
   } catch (error) {
-    console.error("Error fetching users:", error);
+    console.error(error);
     throw error;
   }
 };
@@ -43,10 +43,9 @@ export const updateFollowers = async (
       subscribe: !subscribeOption,
     });
 
-    console.log("Запит на зміну фоловерів успішно відправлено.", response.data);
     return response.data;
   } catch (error) {
-    console.error("Помилка при відправці запиту на зміну фоловерів.", error);
+    console.error(error);
     throw error;
   }
 };

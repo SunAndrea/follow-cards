@@ -56,7 +56,6 @@ const FollowCards: React.FC = () => {
   const handleFilterChange = (
     selectedOption: { value: string; label: string } | null
   ) => {
-    console.log(selectedOption);
     setFilterValue(selectedOption ? selectedOption.value : null);
   };
 
@@ -89,7 +88,6 @@ const FollowCards: React.FC = () => {
       setVisibleUsers(filteredUsers.slice(0, loadMoreCount));
     } else if (filterValue === "following") {
       const filteredUsers = users.filter((user) => user.subscribe);
-      console.log(filteredUsers);
       setVisibleUsers(filteredUsers.slice(0, loadMoreCount));
     }
   };
