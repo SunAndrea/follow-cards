@@ -105,8 +105,8 @@ const FollowCards: React.FC = () => {
       <ul className={css.list}>
         {visibleUsers.map(({ tweets, followers, avatar, subscribe, id }) => {
           return (
-            <li className={css.list} key={id}>
-              <div className={css.listItem}>
+            <li className={css.listItem} key={id}>
+              <div>
                 <img
                   className={css.image}
                   src="https://i.ibb.co/PWXWvy4/picture.png"
