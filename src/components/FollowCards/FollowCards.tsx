@@ -54,7 +54,10 @@ const FollowCards: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterValue]);
 
-  const handleFilterChange = (selectedOption: any) => {
+  const handleFilterChange = (
+    selectedOption: { value: string; label: string } | null
+  ) => {
+    console.log(selectedOption);
     setFilterValue(selectedOption ? selectedOption.value : null);
   };
 
