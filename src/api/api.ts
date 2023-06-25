@@ -50,11 +50,3 @@ export const updateFollowers = async (
   }
 };
 
-// export const getUsers = (page) => {
-//   const response = api.get(`/users?limit=3&page=${page}`);
-//   return response;
-// };
-
-// export const changeFollowers = (id, user) => {
-//   return api.put(`/users/${id}`, user);
-// };
